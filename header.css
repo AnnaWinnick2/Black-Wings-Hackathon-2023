@@ -1,0 +1,25 @@
+.header {
+  height: 120px;
+  display: block;
+  display: flex;
+  position: fixed;
+  align-items: center;
+  top: 0px;
+  right: 0px;
+  left: 0px;
+  background-image: linear-gradient(to right, rgb(164, 176, 245, 0.9),
+  rgb(68, 100, 173, 0.8));
+  border-bottom-width: 13px;
+  border-bottom-style: groove;
+  border-bottom-color: rgb(164, 176, 245);
+  z-index: 100;
+}
+
+.page-title {
+  font-family: Outfit, Arial;
+  font-weight: 700;
+  font-size: 80px;
+  flex-shrink: 0;
+  padding-left: 30px;
+  color: rgb(34, 22, 43);
+}

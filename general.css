@@ -1,0 +1,13 @@
+p {
+  font-family: Outfit, Arial;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+body {
+  margin: 0;
+  height: 2000px;
+  padding-top: 130px;
+  background-image: linear-gradient(to bottom left, rgb(164, 176, 245, 1),
+  rgb(68, 100, 173, 0.8));
+}
