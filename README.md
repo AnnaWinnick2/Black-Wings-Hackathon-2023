@@ -1,5 +1,5 @@
-# Black Unified Mothers Program (BUMP)
 
+# ![BUMP](B.U.M.P.svg) (Black Unified Mothers Program)
 Pregnancy-related mortality rates among Black women are over three higher when compared to the rate for White women.The disparities in maternal and infant health are a manifestation of deeper social and economic injustices, which stem from systemic racism and discrimination. 
 
 The Black Unified Mothers Program (BUMP) is a community-focused initiative that aims to empower and support Black pregnant mothers.
