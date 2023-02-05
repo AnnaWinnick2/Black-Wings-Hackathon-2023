@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<!--LANDING PAGE - ONLY DAISY EDITS-->
+<!--Everyone else, edit your respective file-->
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <!--Use below line if we want a favicon for the pate, otherwise delete-->
+    <!-- <link rel="stylesheet" href=”style.css”> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600&display=swap" rel="stylesheet">
+    <title>Bump</title> 
+    <style>
+        /* Add styles for header */
+        header {
+            width: 100%;
+            height: 100vh;
+            background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url(back.png);
+            background-size: cover;
+            background-position: center;
+        }
+        nav{
+            width: 85%;
+            margin: auto;
+            padding: 35px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .logo{
+            width: 120px;
+            cursor: pointer;
+        }
+        nav ul li{
+            list-style: none;
+            display: inline-block;
+            margin: 0 20px;
+            position: relative;
+        }
+        nav ul li a{
+            text-decoration: none;
+            color: #8E8DDB;
+            text-transform: uppercase;
+            font-size: 20px;
+            font-family: 'Outfit', sans-serif;
+        }
+        nav ul li::after{
+            content: '';
+            height: 3px;
+            width: 0%;
+            background: #4464AD;
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            transition: 0.5s;
+        }
+        nav ul li:hover::after{
+            width: 100%;
+        }
+        .content{
+            width: 100%;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            text-align: center;
+            color: #fff;
+        }
+        .content h1{
+            font-size: 70px;
+            margin: 80px;
+            color: #fff; 
+            font-family: 'Outfit', sans-serif;
+        }
+        .content p{
+            font-weight: 100;
+            margin: 20px auto;
+            line-height: 25px;
+            color: #fff; 
+            font-family: 'Outfit', sans-serif;
+        }
+        button{
+            width: 200px;
+            padding: 15px 0;
+            text-align: center;
+            margin: 20px 10px;
+            border-radius: 25px;
+            font-weight: bold;
+            border: 2px solid #4464AD;
+            background: transparent;
+            color: #fff;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+        span{
+            background: #4464AD;
+            height: 100%;
+            width: 0%;
+            border-radius: 25px;
+            position:absolute;
+            left: 0;
+            bottom: 0;
+            z-index: -1;
+            transition: 0.5s;
+        }
+        button:hover span{
+            width: 100%;
+        }
+        button:hover{
+            border: none;
+        }
+        button li{
+            list-style: none;
+            display: inline-block;
+            margin: 0 20px;
+            position: relative;
+        }
+        button li a{
+            text-decoration: none;
+            color: #8E8DDB;
+            text-transform: uppercase;
+            font-size: 10px;
+            font-family: 'Outfit', sans-serif;
+        }
+        .nav-item{
+            margin-left: 40px;
+            margin-bottom: 10px;
+        }
+        .nav-link{
+            color: #8E8DDB;
+            font-size: 12px;
+            padding: 0 0 5px 0;
+            display: unset;
+        }
+      </style>     
+</head>
+<body id="body" style="background-color: #22162b;">
+    <header>
+        <!-- <nav>
+            <img src="B.U.M.P.svg" class="logo">
+            <ul class="navbar-nav ml-auto text-right">
+                <li class="nav-item">
+                    <a class="nav-link" href="/about.html">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/resources.html">Resources</a>
+                </li>
+                <!-- <li class="nav-item">
+                    <a class="nav-link" href="forum.html">Forum</a>
+                </li> -->
+                <li class="nav-item">
+                    <a class="nav-link" href="team.html">Team</a>
+                </li>
+            </ul>
+        </nav> -->
+    </header>
+        <div class="content">
+          <h1>Meet the Team</h1>
+          <div class="py-2 px-2 max-w-sm mx-auto bg-white rounded-l shadow-lg space-y-2 sm:py-2 sm:flex sm:items-center sm:space-y-0 sm:space-x-3">
+            <!-- <img class="block mx-auto h-2 rounded-full sm:mx-0 sm:shrink-0" src="dan.jpg" alt="daisy's Face"> -->
+            <div class="text-center space-y-2 sm:text-left">
+              <div class="space-y-0.5">
+                <p class="text-lg text-black font-semibold">
+                  <li><a href="https://www.linkedin.com/in/daisy-nsibu/">Daisy Nsibu</a></li>
+                </p>
+                <p class="text-slate-500 font-medium">
+                
+                  <li><a href="https://www.linkedin.com/in/audrey-marthin-052394186/">Audrey Marthin</a></li>
+                </p>
+                <p class="text-lg text-black font-semibold">
+                 
+                  <li><a href="https://www.linkedin.com/in/anna-winnick/">Anna Winnick</a></li>
+                </p>
+                <p class="text-slate-500 font-medium">
+                  <li><a href="https://www.linkedin.com/in/carolinehaoud/">Caroline Haoud</a></li>
+                </p>
+              </div>
+              <!-- <button class="px-4 py-1 text-sm text-purple-600 font-semibold rounded-full border border-purple-200 hover:text-white hover:bg-purple-600 hover:border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-offset-2">Message</button> -->
+            </div>
+          </div>
+          <!-- <p>Enhance your birthing experience by learning what to expect when giving birth,<br>how to advocate for yourself and gaining access to resources for a healthier pregnancy and a brighter future.</p>   -->
+            <!-- <button type="button"><span></span><li><a href="/pregnancy.html">PREGNANCY</a></li></button> -->
+            <!-- <button type="button"><span></span><li><a href="/givingBirth.html">GIVING BIRTH</a></li></button> -->
+            <!-- <button type="button"><span></span><li><a href="/newMotherhood.html">NEW MOTHERHOOD</a></li></button> -->
+        </div>
+</body>
