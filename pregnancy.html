@@ -1,11 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>Pregnancy</title>
-  </head>
+    <head>
+        <meta charset="utf-8">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600&display=swap" rel="stylesheet">        
+        <title>Pregnancy</title>
+    </head>
   
-  <body>
-    <!-- most of the code goes here-->
-  </body>
+    <body id="body" style="background-color: #22162b;">
+
+        <!--Before Submit-->
+
+        <div id="weeks-along-input" style="visibility: visible; justify-self: center; align-self: center; padding-inline: 200px; padding-block: auto">
+            <div>
+                <p style="color: #a4b0f5; font-family: 'Outfit', sans-serif; font-size: 62px;">Let's get started: </p>
+                <p style="color: #a4b0f5; font-family: 'Outfit', sans-serif; font-size: 62px;">How many weeks along are you?</p>
+            </div>
+            <form id="weeks-along-form" onsubmit="return false;">
+                <div style="display: flex; justify-content: flex-end; align-items: center;">
+                    <input type="number" autofocus min="0" max="45" id="weeks" name="weeks" style="width: 100px; height: 80px; font-size: 60px; font-family: 'Outfit', sans-serif; color: #a4b0f5; background-color: #22162b;"/>
+                    <p style="color: #a4b0f5; font-family: 'Outfit', sans-serif; font-size: 62px; padding-left: 20px;"> Weeks</p>
+                </div>
+                <div style="display: flex; justify-content: center;">
+                    <input type="submit" onclick="weeksAlong();" style="background-color: #a4b0f5; font-size: 40px; font-family: 'Outfit', sans-serif; color: #22162b" />
+                </div>
+            </form>
+        </div>
+
+        <!--After submit-->
+
+        <div id="info-body" style="display: none;">
+            <div id="weeks-display">
+                <div style="display: flex; justify-content: center;">
+                    <p id="trimester-text" style="color: #4464ad; font-family: 'Outfit', sans-serif; font-size: 62px; white-space:pre">At </p>
+                    <p id="weeks-text" style="color: #22162b; font-family: 'Outfit', sans-serif; font-size: 62px; white-space:pre"></p>
+                    <p id="trimester-text" style="color: #4464ad; font-family: 'Outfit', sans-serif; font-size: 62px; white-space:pre">, you are in your</p>
+                    <p id="trimester-num" style="color: #22162b; font-family: 'Outfit', sans-serif; font-size: 62px; white-space:pre"></p>
+                </div>
+                <div style="display: flex; flex-direction: column-reverse; align-items: center; padding-inline: 40px;">
+                    <p id="baby-size" style="color: #22162b; font-family: 'Outfit', sans-serif; font-size: 30px;"></p>
+                    <div style="margin-inline: 20px;">
+                        <img id="baby-fruit">
+                    </div>
+                </div>
+            </div>
+
+            <!--TODO: insert line separator like audrey's-->
+
+            <p style="color: #22162b; font-family: 'Outfit', sans-serif; font-size: 30px; margin-inline: 30px">Planning Your Care</p>
+            <div id="doctor_plan" style="display: flex; justify-content: center; align-items: center; padding-inline: 40px;">
+                <div style="margin-inline: 40px;">
+                    <img src="doctor.jpeg" alt="woman receiving ultrasound">
+                </div>
+                <div>
+                    <p id="doctor_schedule" style="color: #4464ad; font-family: 'Outfit', sans-serif; font-size: 20px; "></p>
+                    <p id="doctor_past" style="color: #4464ad; font-family: 'Outfit', sans-serif; font-size: 20px;"></p>
+                </div>
+            </div>
+            <!--TODO: insert space-->
+            <div id="dr-buttons" style="display: flex; justify-content: center;">
+                <button onclick="window.location.href='https://book.zocdoc.com/get-started/obgyns';" style="background-color: #22162b; color:#a4b0f5; font-family: 'Outfit', sans-serif; font-size: 25px; margin-inline: 30px; margin-block: 10px; padding: 10px; border-radius: 3px;">
+                    Find an OB/GYN
+                </button>
+                <button onclick="window.location.href='https://www.whattoexpect.com/pregnancy/your-health/questions-black-moms-should-ask-obgyn';" style="background-color: #22162b; color:#a4b0f5; font-family: 'Outfit', sans-serif; font-size: 25px; margin-inline: 30px; margin-block: 10px; padding: 10px; border-radius: 3px;">
+                    What to Ask
+                </button>
+            </div>
+
+            <!--TODO: insert line separator like audrey's-->
+
+            <p style="color: #22162b; font-family: 'Outfit', sans-serif; font-size: 30px; margin-inline: 30px">Financial Planning</p>
+            <div id="costs" style="display: flex; justify-content: center; align-items: center; padding-inline: 40px;">
+                <div id="financial-buttons" style="display: flex; justify-content: center;">
+                    <button onclick="window.location.href='https://www.whattoexpect.com/pregnancy/pregnancy-costs/';" style="background-color: #22162b; color:#a4b0f5; font-family: 'Outfit', sans-serif; font-size: 25px; margin-inline: 30px; margin-block: 10px; padding: 10px; border-radius: 3px;">
+                        Pregnancy Costs
+                    </button>
+                    <button onclick="window.location.href='https://www.babycenter.com/baby-cost-calculator';" style="background-color: #22162b; color:#a4b0f5; font-family: 'Outfit', sans-serif; font-size: 25px; margin-inline: 30px; margin-block: 10px; padding: 10px; border-radius: 3px;">
+                        First-Year Costs
+                    </button>
+                    <button onclick="window.location.href='https://www.parents.com/parenting/money/family-finances/32-ways-to-save-money-when-you-have-a-baby/';" style="background-color: #22162b; color:#a4b0f5; font-family: 'Outfit', sans-serif; font-size: 25px; margin-inline: 30px; margin-block: 10px; padding: 10px; border-radius: 3px;">
+                        How to Save
+                    </button>
+                </div>
+            </div>
+
+            <!--TODO: insert line separator like audrey's-->
+
+            <p style="color: #22162b; font-family: 'Outfit', sans-serif; font-size: 30px; margin-inline: 30px">Books</p>
+            <div id="books" style="padding-inline: 40px;">
+                <p style="color: #4464ad; font-family: 'Outfit', sans-serif; font-size: 30px;">Books to read</p>
+                <div id="nurture" style="display: flex; justify-content: center; align-items: center; padding-inline: 40px;">
+                    <div style="margin-inline: 40px;">
+                        <img src="nurture.jpeg" style="height: 200px">
+                    </div>
+                    <div>
+                        <p id="nurture_blurb" style="color: #4464ad; font-family: 'Outfit', sans-serif; font-size: 20px; ">
+                        "When seeking out black doula books, look no further. Erica Chidi is the birth and postpartum doula who created something special for modern black moms-to-be and their partners. 
+
+                        This integrative pregnancy and birthing guide covers everything from self-care and mindfulness to advice on choosing a hospital or home birth. The volume of supporting information just makes this one of the best parenting books for black parents."
+                        </p>
+                    </div>
+                </div>
+                <div id="sis" style="display: flex; justify-content: center; align-items: center; padding-inline: 40px;">
+                    <div style="margin-inline: 40px;">
+                        <img src="sis_pregnant.jpeg" style="height: 200px">
+                    </div>
+                    <div>
+                        <p id="sis_blurb" style="color: #4464ad; font-family: 'Outfit', sans-serif; font-size: 20px; ">
+                            "Tailored to today’s pregnant Black woman. In the age of social media, how do pregnant women communicate their big announcement? What are the best protective hairstyles for labor? Most importantly, how many pregnancy guides focus on issues like Black maternal birth rates and what it really looks like to be Black, pregnant, and single today? Written for the modern pregnant Black woman, Oh Sis, You’re Pregnant! is the essential what to expect when you're expecting guide to understanding pregnancy from a millennial Black mom’s point of view."                       
+                        </p>
+                    </div>
+                </div>
+                <div id="pregnant" style="display: flex; justify-content: center; align-items: center; padding-inline: 40px;">
+                    <div style="margin-inline: 40px;">
+                        <img src="pregnant.jpeg" style="height: 200px">
+                    </div>
+                    <div>
+                        <p id="pregnant_blurb" style="color: #4464ad; font-family: 'Outfit', sans-serif; font-size: 20px; ">
+                            "When you’re looking for month-by-month guidance, this book covers it all. This guide was written by Yvette Allen-Campbell and Dr. Suzanne Greenidge-Hewitt for Black mothers in light of their higher risk of complications during pregnancy, such as hypertension, asthma, and preterm birth."
+                        </p>
+                    </div>
+                </div>
+                <!--TODO: book cover on left, small blurb on right-->
+                <!--TODO: add advocacy resources-->
+            </div>
+
+            <!--TODO: insert line separator like audrey's-->
+
+            <p style="color: #22162b; font-family: 'Outfit', sans-serif; font-size: 30px; margin-inline: 30px">Advocate for Yourself</p>
+            <div id="advocacy" style="display: flex; justify-content: center; align-items: center; padding-inline: 40px;">
+                <div id="advocacy-buttons" style="display: flex; justify-content: center;">
+                    <button onclick="window.location.href='https://www.verywellfamily.com/advocating-for-yourself-during-pregnancy-as-a-black-parent-6836309';" style="background-color: #22162b; color:#a4b0f5; font-family: 'Outfit', sans-serif; font-size: 25px; margin-inline: 30px; margin-block: 10px; padding: 10px; border-radius: 3px;">
+                        Advocacy for Women
+                    </button>
+                    <button onclick="window.location.href='https://www.chicagobirthworks.com/post/how-to-be-a-good-partner';" style="background-color: #22162b; color:#a4b0f5; font-family: 'Outfit', sans-serif; font-size: 25px; margin-inline: 30px; margin-block: 10px; padding: 10px; border-radius: 3px;">
+                        Advocating for Your Partner
+                    </button>
+                    <button onclick="window.location.href='https://www.verywellfamily.com/organizations-support-black-moms-and-families-5069723';" style="background-color: #22162b; color:#a4b0f5; font-family: 'Outfit', sans-serif; font-size: 25px; margin-inline: 30px; margin-block: 10px; padding: 10px; border-radius: 3px;">
+                        Organizations
+                    </button>
+                </div>
+            </div>
+        </div>
+        <script>
+            function weeksAlong() {
+                var weeks_input = document.getElementById("weeks").value;
+
+                var trimester_num = "first";
+                var doctor_frequency = "4-5";
+                var doctor_times = Math.floor(weeks_input / 5);
+                if (weeks_input > 12) {
+                    trimester_num = "second";
+                }
+                if (weeks_input > 26) {
+                    trimester_num = "third";
+                    doctor_frequency = "2";
+                    doctor_times = 5 + Math.floor((weeks_input - 26)/2);
+                }
+                document.getElementById('weeks-text').innerHTML = " " + weeks_input + " weeks";
+                document.getElementById('trimester-num').innerHTML = " " + trimester_num + " trimester!";
+
+
+                var babySizes = ["Poppy Seed", "Lime", "Apple", "Grapefruit", "Cabbage", "Honeydew", "Watermelon"];
+                var babyFruits = ["seed.jpeg", "lime.jpeg", "apple.jpeg", "grapefruit.jpeg", "cabbage.jpeg", "honeydew.jpeg", "watermelon.jpeg"];
+                document.getElementById('baby-fruit').src = babyFruits[Math.floor(weeks_input/6)];
+                document.getElementById('baby-size').innerHTML = "Baby is about the size of a " + babySizes[Math.floor(weeks_input/6)];
+
+                document.getElementById('doctor_schedule').innerHTML = "In the " + trimester_num + " trimester you should be going to the doctor every " + doctor_frequency + " weeks.";
+
+                document.getElementById('doctor_past').innerHTML = "This means you should have seen a physician at least " + doctor_times + " times so far during your pregnancy.";
+
+                var intro = document.getElementById('weeks-along-input');
+                intro.style.display = "none";
+
+                var div = document.getElementById('info-body');
+                div.style.display = "";
+
+                document.getElementById('body').style.backgroundColor = "#f5f4ff";
+            }
+        </script>
+    </body>
 </html> 
